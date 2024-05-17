@@ -1,0 +1,20 @@
+{
+  "name": "automationapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress run --record --key b0aeae06-bc8e-4292-abdc-52ea14cc85c9",
+    "cypress-run-config-stage":"npx cypress open --config-file cypress/config/cypress_stage.config",
+    "generate-allure-report-cypress":"npx allure serve allure-results",
+    "run-with-specific-test":"npx cypress run --spec cypress/e2e/test-case-get/get.spec.js"
+  },
+  "keywords": [],
+  "author": "Thanh Lam",
+  "license": "ISC",
+  "devDependencies": {
+    "allure-commandline": "^2.29.0",
+    "allure-cypress": "^2.15.1",
+    "cypress": "^13.9.0"
+  }
+}
