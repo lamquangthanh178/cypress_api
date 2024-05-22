@@ -7,6 +7,7 @@ describe('Scenario 2 test suite', () => {
     let email
     let first_name
     let last_name
+    let valiUserPasswordLogin = Cypress.env('validUserPasswordLogin')
 
 
     it('Verify user that exist ', () => {
@@ -24,7 +25,7 @@ describe('Scenario 2 test suite', () => {
     it('User login to the system', () => {
         const userLoginInfoPayload = {
             email: email,
-            password: 'cityslicka'
+            password: valiUserPasswordLogin
         };
         cy.login(userLoginInfoPayload).then((response) => {
             expect(response.status).to.eql(200);

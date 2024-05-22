@@ -4,11 +4,13 @@ describe('Post test suite', () => {
     let token
     let userId = Cypress.env('userId');;
     let invalidUserID = Cypress.env('invalidUserId');
+    let valiUserLogin = Cypress.env('validUserLogin')
+    let valiUserPasswordLogin = Cypress.env('validUserPasswordLogin')
 
     it('User login to the system', () => {
         const userLoginInfoPayload = {
-            email: 'eve.holt@reqres.in',
-            password: 'cityslicka'
+            email: valiUserLogin,
+            password: valiUserPasswordLogin
         };
         cy.login(userLoginInfoPayload).then((response) => {
             expect(response.status).to.eql(200);

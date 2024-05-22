@@ -2,11 +2,14 @@ import { randomInteger, randomStringCharacter } from "../../support/utils-comman
 
 describe('Login test suite', () => {
     let token
+    let valiUserLogin = Cypress.env('validUserLogin')
+    let valiUserPasswordLogin = Cypress.env('validUserPasswordLogin')
+
 
     it('User login to the system', () => {
         const userLoginInfoPayload = {
-            email: 'eve.holt@reqres.in',
-            password: 'cityslicka'
+            email: valiUserLogin,
+            password: valiUserPasswordLogin
         };
         cy.login(userLoginInfoPayload).then((response) => {
             expect(response.status).to.eql(200);

@@ -7,7 +7,9 @@ module.exports = defineConfig({
   env: {
     url: 'https://reqres.in',
     userId: '2',
-    invalidUserId: '-1'
+    invalidUserId: '-1',
+    validUserLogin: 'eve.holt@reqres.in',
+    validUserPasswordLogin: 'cityslicka'
   },
   e2e: {
     setupNodeEvents(on, config) {

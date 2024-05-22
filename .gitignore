@@ -21,4 +21,7 @@ rad.json
 #Test results file
 TestResults.xml
 .node_modules/
-.allure-results/
+node_modules/
+allure-results/
+screenshots/
+videos/
